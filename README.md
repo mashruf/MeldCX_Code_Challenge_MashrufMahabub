@@ -38,6 +38,14 @@ or
 nvm use 22
 
 ```
+- Check the current version of Node running in your machine by
+```
+node -v
+
+```
+
+Use recommended version of Node.js before setting up the prototype
+
 ## Installation and dependencies
 - Clone or download the prototype
 - Open the project with code editor
