@@ -1,8 +1,26 @@
 # QA Testing Quiz
 
 ## About
-The frontend team of MeldCX has developed a prototype login portal for an up and coming platform.
-Necessary testings have been implemented for the Code Challenge.
+The necessary testing has been implemented in the prototype login portal developed by MeldCX for the QA Code Challenge.
+
+##Recommended Software
+The prototype was compiled using Node.js v16.20.2.
+For compatibility, users are recommended to use the same version or any release within the Node.js 16.x series.
+
+If you use different version of Node.js, you can use NVM(Node Version Manager) to use multiple verions of Node.js.
+
+- Download NVM from https://github.com/coreybutler/nvm-windows/releases
+- Uninstall existing Node.js from your machine
+- Install NVM
+- After installing NVM you can check the current version by running the following command on command prompt
+```
+nvm -v
+
+```
+##Installation
+- Clone or download the project.
+- Open the project with code editor
+- 
 
 
 
