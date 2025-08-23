@@ -1,7 +1,7 @@
 # QA Testing Quiz
 
 ## About
-The necessary testing has been implemented in the prototype login portal developed by MeldCX for the QA Code Challenge.
+Necessary testing has been implemented in the prototype login portal developed by MeldCX for the QA Code Challenge.
 
 ## Recommended Software
 The prototype was compiled using Node.js v16.20.2.
@@ -44,11 +44,14 @@ Use recommended version of Node.js before setting up the prototype
 - Clone or download the prototype
 - Open the project with code editor
 - Open terminal in the project folder
-- Run following commands
+- Run following command
 ```
 yarn start
 ```
 - It will compile the project and you will be able to run the Mock API and the UI.
+
+## Testing the Mock API
+- You will find the test cases for the Mock API [here](https://docs.google.com/spreadsheets/d/1rXSBUJcGwSCVsqsOs-UBs1G8LKR_9rU3uOIAB6KpdJ0/edit?usp=sharing)
 
 
 
