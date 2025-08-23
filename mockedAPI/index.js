@@ -72,9 +72,9 @@ app.put('/user', (req, res) => {
         password,
         favouriteFruit,
 
-        //account was updating but favouriteMovie was missing
+        //account was getting updated but favouriteMovie was missing
         //find it after checking the ../storage/account.json
-        //added it later
+        //added it here after finding it was missing
         favouriteMovie,
 
         favouriteNumber,
