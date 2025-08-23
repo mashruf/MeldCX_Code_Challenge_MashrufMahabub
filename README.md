@@ -15,33 +15,27 @@ If you use different version of Node.js, you can use NVM(Node Version Manager) t
 - After installing NVM you can check the current version by running the following command on command prompt
 ```
 nvm -v
-
 ```
 - Install Node.js using NVM
 ```
 nvm install 16
-
 ```
 - You can install multiple version of Node.js using NVM
 ```
 nvm install 22
-
 ```
 - Choose between different versions
 ```
 nvm use 16
-
 ```
 or
 
 ```
 nvm use 22
-
 ```
 - Check the current version of Node running in your machine by
 ```
 node -v
-
 ```
 
 Use recommended version of Node.js before setting up the prototype
@@ -53,11 +47,9 @@ Use recommended version of Node.js before setting up the prototype
 - Run following commands
 ```
 npm install -g yarn
-
 ```
 ```
 yarn install
-
 ```
 - All the necessary depedencies will be downloaded
 - Without installing the dependencies, you will not be able to run the Mock API or the UI
