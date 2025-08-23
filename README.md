@@ -46,13 +46,9 @@ Use recommended version of Node.js before setting up the prototype
 - Open terminal in the project folder
 - Run following commands
 ```
-npm install -g yarn
+yarn start
 ```
-```
-yarn install
-```
-- All the necessary depedencies will be downloaded
-- Without installing the dependencies, you will not be able to run the Mock API or the UI
+- It will compile the project and you will be able to run the Mock API and the UI.
 
 
 
