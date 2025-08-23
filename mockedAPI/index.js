@@ -71,11 +71,16 @@ app.put('/user', (req, res) => {
         name,
         password,
         favouriteFruit,
+
+        //account was updating but favouriteMovie was missing
+        //find it after checking the ../storage/account.json
+        //added it later
+        favouriteMovie,
+
         favouriteNumber,
     }
 
-    if(!data[username])//fixed the logic from true to false 
-        data[username] = user;
+    if(data[username]) data[username] = user;
     else res.send("Account Does NOT Exist");
 
     console.log(data);
