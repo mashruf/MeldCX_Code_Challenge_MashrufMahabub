@@ -3,7 +3,7 @@
 ## About
 The necessary testing has been implemented in the prototype login portal developed by MeldCX for the QA Code Challenge.
 
-##Recommended Software
+## Recommended Software
 The prototype was compiled using Node.js v16.20.2.
 For compatibility, users are recommended to use the same version or any release within the Node.js 16.x series.
 
@@ -17,7 +17,28 @@ If you use different version of Node.js, you can use NVM(Node Version Manager) t
 nvm -v
 
 ```
-##Installation
+- Install Node.js using NVM
+```
+nvm install 16
+
+```
+- You can install multiple version of Node.js using NVM
+```
+nvm install 22
+
+```
+- Choose between different versions
+```
+nvm use 16
+
+```
+or
+
+```
+nvm use 22
+
+```
+## Installation
 - Clone or download the project.
 - Open the project with code editor
 - 
