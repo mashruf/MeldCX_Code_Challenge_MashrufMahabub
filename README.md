@@ -60,14 +60,25 @@ It will compile the project and you will be able to run the Mock API and the UI.
 ## Testing the Mock API
 - Postman was used to test the Mock API
 - You will find the test cases for the Mock API [here](https://docs.google.com/spreadsheets/d/1rXSBUJcGwSCVsqsOs-UBs1G8LKR_9rU3uOIAB6KpdJ0/edit?usp=sharing)
-- To generate Postman report, first we need to go to the following location 
+- We need to keep the Mock API open. To do that we need to go the following folder
 ```
-    mockedAPI/
-    ├── index.js
+mockedAPI/
+├── index.js 
 ```
-and run
+and then run command
 ```
 node index.js
+```
+The server will start running 
+- Keep the server running to run Postman test and generate Postman report
+- To run the Postman test run the following command 
+```
+yarn postman:test
+```
+and to generate the API report
+
+```
+yarn postman:report
 ```
 
 
