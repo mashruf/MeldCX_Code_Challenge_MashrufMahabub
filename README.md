@@ -4,8 +4,7 @@
 Necessary testing has been implemented in the prototype login portal developed by MeldCX for the QA Code Challenge.
 
 ## Recommended Software
-The prototype was compiled using Node.js v16.20.2.
-For compatibility, users are recommended to use the same version or any release within the Node.js 16.x series.
+Users are recommended to use any release within the Node.js 16.x series.
 
 If you use different version of Node.js, you can use NVM(Node Version Manager) to use multiple verions of Node.js.
 
@@ -59,6 +58,12 @@ It will compile the project and you will be able to run the Mock API and the UI.
 
 # Testing The Mock API
 - Postman was used to test the Mock API
+- Postman collection will be found in the following folder
+```
+mockedAPI/
+└── Postman_Collection/
+└── Mocked_API.postman_collection.json
+```
 - You will find the test cases for the Mock API [here](https://docs.google.com/spreadsheets/d/1rXSBUJcGwSCVsqsOs-UBs1G8LKR_9rU3uOIAB6KpdJ0/edit?usp=sharing)
 - We need to keep the Mock API open. To do that we need to go the following folder
 ```
