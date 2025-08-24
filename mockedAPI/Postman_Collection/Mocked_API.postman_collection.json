@@ -1,0 +1,593 @@
+{
+	"info": {
+		"_postman_id": "dd56f6d3-245b-433c-a4d6-cefd001d8a91",
+		"name": "Mocked_API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31806851",
+		"_collection_link": "https://qa2222-3406.postman.co/workspace/MeldCX_Code_Challenge~5f23b592-cf90-412f-944f-7259a1eb1342/collection/31806851-dd56f6d3-245b-433c-a4d6-cefd001d8a91?action=share&source=collection_link&creator=31806851"
+	},
+	"item": [
+		{
+			"name": "API_UP",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var message = pm.response.text();\r",
+							"\r",
+							"pm.test(\"API is responding\", function () {\r",
+							"    pm.expect(message).to.eql(\"Backend API\");\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SuccessfulAccountCreation",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var message = pm.response.text();\r",
+							"\r",
+							"pm.test(\"Successful account creation\", function () {\r",
+							"    pm.expect(message).to.eql(\"Account Created\");\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"mashruf\", \r\n    \"name\": \"Mashruf Mahabub\", \r\n    \"password\": \"secret1234\", \r\n    \"favouriteFruit\": \"Mango\", \r\n    \"favouriteMovie\": \"Superman\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/user",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UnsuccessfulAccountCreation",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var message = pm.response.text();\r",
+							"\r",
+							"pm.test(\"Successful account creation\", function () {\r",
+							"    pm.expect(message).to.eql(\"Bad Request\");\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/user",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateAccountWithExistingUsername",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var message = pm.response.text();\r",
+							"\r",
+							"pm.test(\"Create account with existing username\", function () {\r",
+							"    pm.expect(message).to.eql(\"Account Already Exists\");\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"mashruf\", \r\n    \"name\": \"Mahabub Rohon\", \r\n    \"password\": \"secret5678\", \r\n    \"favouriteFruit\": \"Watermelon\", \r\n    \"favouriteMovie\": \"It\",\r\n     \"favouriteNumber\": 7\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9999/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9999",
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UnsuccessfulCreateAccountWithExistingUsername",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var message = pm.response.text();\r",
+							"\r",
+							"pm.test(\"Create account with existing username\", function () {\r",
+							"    pm.expect(message).to.eql(\"Bad Request\");\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9999/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9999",
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateAccountInfoOfExistingUser",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var message = pm.response.text();\r",
+							"\r",
+							"pm.test(\"Update account info of Existing user\", function () {\r",
+							"    pm.expect(message).to.eql(\"Account Updated\");\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Mahabub Rohon\", \r\n    \"password\": \"secret1234\", \r\n    \"favouriteFruit\": \"Mango\", \r\n    \"favouriteMovie\": \"Superman\",\r\n    \"favouriteNumber\": 6\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/user?username=mashruf",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"user"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "mashruf"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UnsuccessfulUpdateAccountInfoOfExistingUser",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var message = pm.response.text();\r",
+							"\r",
+							"pm.test(\"Update account info of Existing user\", function () {\r",
+							"    pm.expect(message).to.eql(\"Bad Request\");\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/user?username=mashruf",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"user"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "mashruf"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateAccountInfoOfNon-existentUser",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var message = pm.response.text();\r",
+							"\r",
+							"pm.test(\"Update account of non-existent user\", function () {\r",
+							"    pm.expect(message).to.eql(\"Account Does NOT Exist\");\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"No one\", \r\n    \"password\": \"test3\", \r\n    \"favouriteFruit\": \"Strawberry\", \r\n    \"favouriteMovie\": \"Spiderman\",\r\n     \"favouriteNumber\": 9\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/user?username=unknown",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"user"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "unknown"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UnsuccessfulUpdateAccountInfoOfNon-existentUser",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var message = pm.response.text();\r",
+							"\r",
+							"pm.test(\"Update account of non-existent user\", function () {\r",
+							"    pm.expect(message).to.eql(\"Bad Request\");\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/user?username=unknown",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"user"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "unknown"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteAccountOfExistingUser",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var message = pm.response.text();\r",
+							"\r",
+							"pm.test(\"Delete account of existing user\", function () {\r",
+							"    pm.expect(message).to.eql(\"Account Deleted\");\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/user?username=mashruf",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"user"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "mashruf"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UnsuccessfulDeleteAccountOfExistingUser",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var message = pm.response.text();\r",
+							"\r",
+							"pm.test(\"Delete account of existing user\", function () {\r",
+							"    pm.expect(message).to.eql(\"Bad Request\");\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/user?username",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"user"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteAccountOfNon-existentUser",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var message = pm.response.text();\r",
+							"\r",
+							"pm.test(\"Delete account of non-existent user\", function () {\r",
+							"    pm.expect(message).to.eql(\"Account Does Not Exist\");\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/user?username=unknown",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"user"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "unknown"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UnsuccessfulDeleteAccountOfNon-existentUser",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var message = pm.response.text();\r",
+							"\r",
+							"pm.test(\"Delete account of non-existent user\", function () {\r",
+							"    pm.expect(message).to.eql(\"Bad Request\");\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/user?username",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"user"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:9999"
+		}
+	]
+}
