@@ -68,7 +68,7 @@ mockedAPI/
 - We need to keep the Mock API open. To do that we need to go the following folder
 ```
 mockedAPI/
-├── index.js 
+└──index.js 
 ```
 and then run command
 ```
