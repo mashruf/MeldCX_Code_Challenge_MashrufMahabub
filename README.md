@@ -116,4 +116,7 @@ cypress/
 └── reports/
     └── html/
 ```
+## Report Generated For Postman API Testing
+<img width="1920" height="1944" alt="Cypress-UI-test-report" src="https://github.com/user-attachments/assets/35f2aca7-5e1f-4eb9-a773-aff4cd223ce4" />
+
 
