@@ -88,12 +88,12 @@ yarn postman:report
 - A folder called **Postman-Report** will be generated where you will find the report
 
 ## Report Generated For Postman API Testing
-<img width="1920" height="1732" alt="screencapture-127-0-0-1-5500-Postman-Report-report-html-2025-08-24-12_09_21" src="https://github.com/user-attachments/assets/04a248e4-a5e8-45a6-9526-1a5e9c147172" />
+<img width="1920" height="1732" alt="Postman-Report" src="https://github.com/user-attachments/assets/04a248e4-a5e8-45a6-9526-1a5e9c147172" />
 
-## Fixes Applied To The Codes
+## Fixes Applied To The Codes 
 - In **index.json** file located in **mockedAPI** folder, the path for the **account.json** file located in **storage** folder was not correct. It was found and fixed after reading the error logs.
 - While testing the **PUT** request to update account information it was found that account was getting updated successfully but **favouriteMovie** was not saving in **account.json**. 
 - Please go through the added comment to find the fixes in the Mock API.  
-
+- No status code was set in the API response. Assertions were conducted based on the text messages returned for successful operations. For every respond, the status was **200**. 
 
 
