@@ -96,4 +96,24 @@ yarn postman:report
 - Please go through the added comment to find the fixes in the Mock API.  
 - No status code was set in the API response. Assertions were conducted based on the text messages returned for successful operations. For every respond, the status was **200**. 
 
+# Testing The UI
+- Cypress was used to test the UI
+- Cypress 12.x was used to conduct the test as it was compatible with Node.js 16.x series
+- Mocha-awesome reporter 3.2.0 was used to generate the report
+- You will find the test cases for the UI [here](https://docs.google.com/spreadsheets/d/1OMngRUZws2LS0noxP7Xb4zgffrHEOoB1sS4k09lXZrw/edit?usp=sharing)
+- Cypress tests will be found in the following folder
+```
+cypress/
+└──e2e/ 
+```
+- To run the test and generate report run
+```
+yarn test:end-to-end
+```
+- After running the test, you will find the report in the following folder
+```
+cypress/
+└── reports/
+    └── html/
+```
 
