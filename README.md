@@ -57,6 +57,11 @@ yarn start
 It will compile the project and you will be able to run the Mock API and the UI.
 
 # Testing The Mock API
+
+## Test Cases For Mock API
+- You will find the test cases for the Mock API [here](https://docs.google.com/spreadsheets/d/1rXSBUJcGwSCVsqsOs-UBs1G8LKR_9rU3uOIAB6KpdJ0/edit?usp=sharing)
+
+## Run API Test And Generate Report
 - Postman was used to test the Mock API
 - Postman collection will be found in the following folder
 ```
@@ -64,7 +69,7 @@ mockedAPI/
 └── Postman_Collection/
 └── Mocked_API.postman_collection.json
 ```
-- You will find the test cases for the Mock API [here](https://docs.google.com/spreadsheets/d/1rXSBUJcGwSCVsqsOs-UBs1G8LKR_9rU3uOIAB6KpdJ0/edit?usp=sharing)
+
 - We need to keep the Mock API open. To do that we need to go the following folder
 ```
 mockedAPI/
@@ -97,10 +102,13 @@ yarn postman:report
 - No status code was set in the API response. Assertions were conducted based on the text messages returned for successful operations. For every respond, the status was **200**. 
 
 # Testing The UI
+## Test Cases For The UI
+- You will find the test cases for the UI [here](https://docs.google.com/spreadsheets/d/1OMngRUZws2LS0noxP7Xb4zgffrHEOoB1sS4k09lXZrw/edit?usp=sharing)
+
+## Run UI Test And Generate Report
 - Cypress was used to test the UI
 - Cypress 12.x was used to conduct the test as it was compatible with Node.js 16.x series
 - Mocha-awesome reporter 3.2.0 was used to generate the report
-- You will find the test cases for the UI [here](https://docs.google.com/spreadsheets/d/1OMngRUZws2LS0noxP7Xb4zgffrHEOoB1sS4k09lXZrw/edit?usp=sharing)
 - Cypress tests will be found in the following folder
 ```
 cypress/
