@@ -7,6 +7,7 @@ describe("Negative Tests",()=>{
 
     it("Verify error message is shown while user try to login keeping username empty",()=>{
         cy.fixture("MeldCX_Account").then((data)=>{
+            cy.get("input[placeholder='Enter Username']");
             cy.get("input[placeholder='password']").type(data.password);//entering password
             cy.get(".sc-bZQynM").click();//clicking login button
 
@@ -19,6 +20,7 @@ describe("Negative Tests",()=>{
     it("Verify error message is shown while user try to login keeping password empty",()=>{
         cy.fixture("MeldCX_Account").then((data)=>{
             cy.get("input[placeholder='Enter Username']").type(data.username);//entering username
+            cy.get("input[placeholder='password']");
             cy.get(".sc-bZQynM").click();//clicking login button
 
             //Error message for not entering password
@@ -28,10 +30,14 @@ describe("Negative Tests",()=>{
     })
 
     it("Verify error message is shown while user try to login keeping username and password empty",()=>{
+        
+        cy.get("input[placeholder='Enter Username']");
+        cy.get("input[placeholder='password']");
         cy.get(".sc-bZQynM").click();//clicking login button
 
         //Error message for keeping username and password empty
         cy.contains("Enter username and password").should("be.visible");
+
     })
 
      it("Verify error message is shown while user try to login using wrong password",()=>{
