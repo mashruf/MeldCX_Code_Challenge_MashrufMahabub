@@ -1,10 +1,11 @@
-import { defineConfig } from "cypress";
+const { defineConfig } = require('cypress');
 
-export default defineConfig({
+module.exports = defineConfig({
+  reporter: 'cypress-mochawesome-reporter',
   e2e: {
-    baseUrl:"http://localhost:8081/",
+    baseUrl: "http://localhost:8081",
     setupNodeEvents(on, config) {
-      // implement node event listeners here
+      require('cypress-mochawesome-reporter/plugin')(on);
     },
   },
 });
