@@ -67,7 +67,7 @@ It will compile the project and you will be able to run the Mock API and the UI.
 ```
 mockedAPI/
 └── Postman_Collection/
-└── Mocked_API.postman_collection.json
+    └── Mocked_API.postman_collection.json
 ```
 
 - We need to keep the Mock API open. To do that we need to go the following folder
